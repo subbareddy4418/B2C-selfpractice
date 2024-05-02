@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim AS final
 WORKDIR /app
 
 # Copy the JAR file into the container
-COPY admin/target/admin-0.0.1-SNAPSHOT.jar /app/admin.jar
+COPY target/admin-0.0.1-SNAPSHOT.jar /app/admin.jar
 
 # Define the command to run the application
-CMD ["java", "-jar", "admin.jar"]
+ENTRYPOINT ["java", "-jar", "admin.jar"]
